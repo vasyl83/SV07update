@@ -211,5 +211,5 @@ As you can see there were no updates and a few packages were held back, wich is 
 
 ![kiauh](<images/Screenshot 2024-03-15 000058.png>)
 
-Install Klipper,
+Install Klipper, Moonraker, Mainsail (or Fluidd or both), KlipperScreen and Crowsnest (plus anything else you use) then reboot.
 
