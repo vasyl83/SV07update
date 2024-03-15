@@ -9,6 +9,8 @@ Tools and software needed:
 
 This guide assumes that you have the default Sovol image flashed on the klipad, it doesn't matter what firmware version nor if it boots properly or is in a boot loop.
 
+**Also backup your printer.cfg and any other config files you may need.**
+
 ## 1. Preparing USB sticks
 Download [Balena Etcher portable and run it](https://etcher.balena.io/#download-etcher)
 
