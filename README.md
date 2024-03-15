@@ -24,3 +24,7 @@ Click "Select target" and point it to USB stick
 Click Select 1. Then wait for it to finish.
 
 Afterwards extract the .xz file into .img and copy that file to the second USB stick as well as rk3328-roc-cc.dtb
+
+The contents of the second USB should look like this:
+
+![2nd usb](<images/Screenshot 2024-03-14 203954.png>)
