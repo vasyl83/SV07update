@@ -2,7 +2,7 @@
 
 Tools and software needed:
 1. 2 x 8 gig or more USB Stick (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
-2. Latest releease of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge)
+2. Latest release of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge)
 3. Sovol's compiled dtb directly from their release image (/boot/dtb/rockchip/rk3328-roc-cc.dtb) or use the one I uploaded to [this repository](https://github.com/vasyl83/sv7update/blob/main/rk3328-roc-cc.dtb).
 4. Computer (or laptop) with a free USB slot
 5. Cable to connect you computer (or laptop) to USB-C port on the klipad, so USB-A to USB-C or USB-C to USB-C
@@ -34,3 +34,16 @@ The contents of the second USB should look like this:
 Now connect both USBs and your PC into the KliPad.
 
 ![all connected](images/20240314_165251.jpg)
+
+On you computer Open up Device Manager and expand Ports (COM & LTP). You should see USB-SERIAL CH340 followed by a COM port number (take note ot if, in my case its COM3):
+
+![com3](<images/Screenshot 2024-03-14 195202.png>)
+
+Start up [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+Input the following settings:
+1. Conenction type: Serial
+2. Serial line: COM3 (or whatever COM Device Manager shows)
+3. Speed: 1500000
+
+![putty](<images/Screenshot 2024-03-14 195248.png>)
