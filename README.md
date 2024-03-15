@@ -1,4 +1,4 @@
-# How to update SV07/SV07+ to Debian Bookworm and flash latest firmware on the MCU.
+# How to update SV07/SV07+ to Debian Bookworm, flash latest firmware on the MCU and other mods that I use.
 
 Tools and software needed:
 1. 2 x 8 gig or more USB Stick (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
