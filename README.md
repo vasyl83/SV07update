@@ -8,3 +8,7 @@ Tools and software needed:
 5. Cable to connect you computer (or laptop) to USB-C port on the klipad, so USB-A to USB-C or USB-C to USB-C
 
 This guide assumes that you have the default Sovol image flashed on the klipad, it doesn't matter what firmware version nor if it boots properly or is in a boot loop.
+
+## Flashing the image onto USB stick and copying the files to the second USB stick
+Download [Balena Etcher portable and run it](https://etcher.balena.io/#download-etcher)
+Click Flash from file and select the image you donwloaded (I will be using Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz as example)
