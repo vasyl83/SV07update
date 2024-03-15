@@ -213,3 +213,32 @@ As you can see there were no updates and a few packages were held back, wich is 
 
 Install Klipper, Moonraker, Mainsail (or Fluidd or both), KlipperScreen and Crowsnest (if you will use a webcam) plus anything else you use, then reboot.
 
+After reboot the screen should now work but will be in the wrong direction. Let's correct that.
+
+![wrond direction](images/20240315_003131.jpg)
+
+`sudo nano /etc/X11/xorg.conf.d/01-armbian-defaults.conf`
+
+then add the following into that file:
+```Section "Device"
+Identifier "default"
+Driver "fbdev"
+Option "Rotate" "CW"
+EndSection
+Section "InputClass"
+Identifier "libinput touchscreen catchall"
+MatchIsTouchscreen "on"
+MatchDevicePath "/dev/input/event*"
+Driver "libinput"
+Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1"
+EndSection
+```
+![nano](<images/Screenshot 2024-03-15 004128.png>)
+
+Ctrl-X then Enter to save the file.
+
+Restart KlipperScreen with: `sudo systemctl restart KlipperScreen.service`
+
+Now everything is in correct direction and touch works!
+
+![good direction KlipperScreen](images/20240315_004409.jpg)
