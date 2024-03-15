@@ -15,7 +15,7 @@ Download [Balena Etcher portable and run it](https://etcher.balena.io/#download-
 Click "Flash from file" and select the image you downloaded (I will be using Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz as example)
 ![balena main window](<images/Screenshot 2024-03-14 201122.png>)
 
-![file selection](<image/Screenshot 2024-03-14 203117.png>)
+![file selection](<images/Screenshot 2024-03-14 203117.png>)
 
 Click "Select target" and point it to USB stick
 
