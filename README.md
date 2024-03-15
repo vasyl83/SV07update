@@ -71,3 +71,13 @@ Delete all the spaces and type in:
 `run bootcmd_usb0`
 
 It will now boot from the USB.
+
+![usb boot](<images/Screenshot 2024-03-14 212446.png>)
+
+once the boot it completed you should see on the screen a line `mkspi login: root (automatic login)`
+
+![root auto login](<images/Screenshot 2024-03-14 212713.png>)
+
+Once it finishes booting you will be prompted to create root password, enter anything. Select your prefered shell (I use zsh), and once it asks you to create a new user, press Ctrl-C to abort and drop into the shell. You are now booted into USB.
+
+## 4. Flashing new image onto EMMC
