@@ -116,3 +116,22 @@ You should see the list of all the files on your second USB stick. (The screesho
 
 ![dd](<images/Screenshot 2024-03-14 215026.png>)
 
+## 7. Rebooting into the new environment
+
+You can now shut down the KliPad by issuying `halt`, or simply pull out the bootable usb stick. You should then see a message `EXT4-fs (sda2): shut down requested (2)`.
+
+Now you should only have the second USB stick connected (the one with dtb and img files).
+
+Press and hold the power buttong on KliPad for about 10 seconds (do not press the spacebar this time, let it boot normally).
+
+If all went well you should see `mkspi login: root (automatic login)` and once again it will ask you to create root password. This time enter the password you will use for root. 
+
+Then, follow all the prompts, select the shell, enter a username for a new user. If you don't want to mess much with printer.cfg later, I suggest you name the user mks, like it was before. If you don't you will have to adjust any references to /home/mks to /home/"username you selected". 
+
+Alter username enter a real name for your user, it can be anything. 
+
+When it asks you for the timezone, it will fail to determine it automatically since there is no internet connection yet. For locale, I suggest you enter 99 to use en_US.UTF-8 which is the default US English locale. 
+
+Continue by following the promts and selecting your timezone. Confirm that the info is correct to finally be dropped into the shell.
+
+![locale-shell](<images/Screenshot 2024-03-14 220532.png>)
