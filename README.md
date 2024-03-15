@@ -244,3 +244,5 @@ Restart KlipperScreen with: `sudo systemctl restart KlipperScreen.service`
 Now everything is in correct direction and touch works!
 
 ![good direction KlipperScreen](images/20240315_004409.jpg)
+
+## 12. printer.cfg and restoring functionality.
