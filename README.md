@@ -57,4 +57,15 @@ Enter the username and password you use (defaults are user:mks password:makerbas
 halt the system:
 `sudo halt`
 
-<video controls src="images/halt.mp4" title="sudo halt"></video>
+Make sure that the KliPan screen in blank, PuTTY window should remain like this (what you see shouldn't be exactly the same, only the result of the command should be the same):
+
+![putty halted](<images/Screenshot 2024-03-14 210833.png>)
+
+now simultaniously hold spacebar on your PC and press the power button on the KliPan (the small one on the right side of the screen) for about 10 seconds. Once you release the button you should see text scrolling on putty window, once it stops scrolling, the last line says (Hit any key to stop autoboot:  0) and you see the cursor adding spaces, release the spacebar, it should look something like this:
+
+![boot interrupt](<images/Screenshot 2024-03-14 211755.png>)
+
+Delete all the spaces and type in:
+`run bootcmd_usb0`
+
+It will now boot from the USB.
