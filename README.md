@@ -121,7 +121,7 @@ You should see the list of all the files on your second USB stick. (The screesho
 
 ## 7. Rebooting into the new environment
 
-You can now shut down the KliPad by issuying `halt`, or simply pull out the bootable usb stick. You should then see a message `EXT4-fs (sda2): shut down requested (2)`.
+You can noow shut down the KliPad by issuying `halt`, or simply pull out the bootable usb stick. You should then see a message `EXT4-fs (sda2): shut down requested (2)`.
 
 Now you should only have the second USB stick connected (the one with dtb and img files).
 
@@ -129,9 +129,9 @@ Press and hold the power buttong on KliPad for about 10 seconds (do not press th
 
 If all went well you should see `mkspi login: root (automatic login)` and once again it will ask you to create root password. This time enter the password you will use for root. 
 
-Then, follow all the prompts, select the shell, enter a username for a new user. If you don't want to mess much with printer.cfg later, I suggest you name the user mks, like it was before. If you don't you will have to adjust any references to /home/mks to /home/"username you selected". 
+Then, follow all the prompts, select the shell, enter a username for a new user. If you don't want to mess much with printer.cfg later, I suggest you name the user `mks`, like it was before. If you don't you will have to adjust any references from /home/mks to /home/"username you selected". 
 
-Alter username enter a real name for your user, it can be anything. 
+After username enter a real name for your user, it can be anything. 
 
 When it asks you for the timezone, it will fail to determine it automatically since there is no internet connection yet. For locale, I suggest you enter 99 to use en_US.UTF-8 which is the default US English locale. 
 
@@ -161,14 +161,13 @@ Lets copy rk3328-roc-cc.dtb and get the wifi working.
 
 ![reboot after dtb](<images/Screenshot 2024-03-14 233024.png>)
 
-
 Wait for it to reboot, login again and run `ip a` - it will show all the ethernet and wifi adapters, we are looking for the presence of `wlan0`
 
 ![wlan0](<images/Screenshot 2024-03-14 233309.png>)
 
 As you can see, for me it appears as the 4th device.
 
-To connect you need to run `sudo nmtui` it will open Network Manager.
+To connect you need to run `sudo nmtui` it will open Network Manager. Once KlipperScreen is installed it can be done from the KlipperScreen.
 
 ![nmtui](<images/Screenshot 2024-03-14 233543.png>)
 
