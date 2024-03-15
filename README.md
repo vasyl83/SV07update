@@ -74,7 +74,7 @@ It will now boot from the USB.
 
 ![usb boot](<images/Screenshot 2024-03-14 212446.png>)
 
-once the boot it completed you should see on the screen a line `mkspi login: root (automatic login)`
+Once the boot is completed you should see on the screen a line `mkspi login: root (automatic login)`
 
 ![root auto login](<images/Screenshot 2024-03-14 212713.png>)
 
