@@ -161,3 +161,27 @@ Lets copy rk3328-roc-cc.dtb and get the wifi working.
 
 Wait for it to reboot, login again and run `ip a` - it will show all the ethernet and wifi adapters, we are looking for the presence of `wlan0`
 
+![wlan0](<images/Screenshot 2024-03-14 233309.png>)
+
+As you can see, for me it appears as the 4th device.
+
+To connect you need to run `sudo nmtui` it will open Network Manager.
+
+![nmtui](<images/Screenshot 2024-03-14 233543.png>)
+
+Select `Activate Connection` then thelect the SSID click Enter.
+
+![SSID select](<images/Screenshot 2024-03-14 233738.png>)
+
+Enter the password and click Enter.
+
+![ssid pass](<images/Screenshot 2024-03-14 234029.png>)
+
+Once connected you should see `*` Next to SSID name.
+
+![activated ssid](<images/Screenshot 2024-03-14 234118.png>)
+
+Exit the program and run `ip a` again, now under wlan0 you should see the IP adress:
+
+![ip assigned](<images/Screenshot 2024-03-14 234346.png>)
+
