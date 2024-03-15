@@ -248,4 +248,14 @@ Now everything is in correct direction and touch works!
 
 ![good direction KlipperScreen](images/20240315_004409.jpg)
 
-## 12. printer.cfg and restoring functionality.
+## Updating  the host MCU RPI & MCU firmware
+
+This section is pretty much a copy/paste from excellent post by [3DPrintDemon](https://github.com/3DPrintDemon/How-to-Update-Sovol-Klipper-Screen-To-Latest-Klipper-SV06-and-SV07?tab=readme-ov-file#updating-the-host-mcu-rpi--mcu-firmware)
+
+Log into you printer with SSH (using PuTTY)
+
+```
+cd ~/klipper/
+make menuconfig
+```
+This will open a window with options for klipper.
