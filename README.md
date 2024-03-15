@@ -135,3 +135,5 @@ When it asks you for the timezone, it will fail to determine it automatically si
 Continue by following the promts and selecting your timezone. Confirm that the info is correct to finally be dropped into the shell.
 
 ![locale-shell](<images/Screenshot 2024-03-14 220532.png>)
+
+## 8. Mounting USB stick and enabling the wifi.
