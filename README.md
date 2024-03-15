@@ -213,6 +213,8 @@ As you can see there were no updates and a few packages were held back, wich is 
 
 Install Klipper, Moonraker, Mainsail (or Fluidd or both), KlipperScreen and Crowsnest (if you will use a webcam) plus anything else you use, then reboot.
 
+## 11. KlipperScreen orientation
+
 After reboot the screen should now work but will be in the wrong direction. Let's correct that.
 
 ![wrond direction](images/20240315_003131.jpg)
