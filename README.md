@@ -185,3 +185,31 @@ Exit the program and run `ip a` again, now under wlan0 you should see the IP adr
 
 ![ip assigned](<images/Screenshot 2024-03-14 234346.png>)
 
+Now you can connect to the KliPad with PuTTY using the IP instead of USB cable. No need to stay next to the printer anymore.
+
+![putty ip connection](<images/Screenshot 2024-03-14 234709.png>)
+
+## 9. Updating
+
+`sudo apt-get update`
+
+`sudo apt-get upgrade -y`
+
+![upgrade held back](<images/Screenshot 2024-03-14 235300.png>)
+
+As you can see there were no updates and a few packages were held back, wich is normal, to update the kernel the image must be reflashed.
+
+## 10. Installing KIAUH
+
+`git` is installed by default, so all you need to do is follow the install instructions on [KIAUH site](https://github.com/dw-0/kiauh)
+
+`cd ~ && git clone https://github.com/dw-0/kiauh.git`
+
+![kiauh git](<images/Screenshot 2024-03-14 235800.png>)
+
+`./kiauh/kiauh.sh` will run KIAUH
+
+![kiauh](<images/Screenshot 2024-03-15 000058.png>)
+
+Install Klipper,
+
