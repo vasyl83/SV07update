@@ -225,7 +225,8 @@ After reboot the screen should now work but will be in the wrong direction. Let'
 `sudo nano /etc/X11/xorg.conf.d/01-armbian-defaults.conf`
 
 then add the following into that file:
-```Section "Device"
+```
+Section "Device"
 Identifier "default"
 Driver "fbdev"
 Option "Rotate" "CW"
