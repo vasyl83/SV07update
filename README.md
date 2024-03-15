@@ -80,14 +80,30 @@ Once the boot is completed you should see on the screen a line `mkspi login: roo
 
 Once it finishes booting you will be prompted to create root password, enter anything. Select your prefered shell (I use zsh), and once it asks you to create a new user, press Ctrl-C to abort and drop into the shell. You are now booted into USB.
 
-## 4. Veryfing boot envirment and flashing new image onto EMMC
+## 4. Confirming USB boot
 
 To make sure the system booted from USB type in `lsblk` it will list all the block devices discovered on the KliPad (block devices are basically storage devices). If everything worked properly you should see the following:
 
 ![lsblk](<images/Screenshot 2024-03-14 155921.png>)
 
-sda is our boot USB, as you can see /boot and / are mounted on sda1 and sda2.
+sda is our boot USB, as you can see /boot and / are mounted on sda1 and sda2.  
 
 sdb is the second USB containing the img and dtb files.
 
 mmcblk1 is the internal EMMC module.
+
+## 5. Mounting second USB stick
+
+To acces the second USB we need to mount it, first lets create a folder to mount it on.
+
+`mkdir /mnt/temp` - create a folder temp under /mnt
+
+`mount /dev/sdb1 /mnt/temp` - mount the first partition of sdb under /mnt/temp
+
+If you get a hint about fstab being modified, it's normal, don't pay attention to that hint.
+
+`cd /mnt/temp` - change directory to /mnt/temp
+
+`ls` - list contents
+
+![ls](<images/Screenshot 2024-03-14 214406.png>)
