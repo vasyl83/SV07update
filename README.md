@@ -107,3 +107,12 @@ If you get a hint about fstab being modified, it's normal, don't pay attention t
 `ls` - list contents
 
 ![ls](<images/Screenshot 2024-03-14 214406.png>)
+
+You should see the list of all the files on your second USB stick. (The screeshot doesn't have rk3328-roc-cc.dtb on it, but if you followed every step you should see it there)
+
+## 6. Flashing the image onto EMMC
+
+`dd if=Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img of=/dev/mmcblk1 status=progress` - this command will copy block by block the contents of the .img file onto /dev/mmcblk1 (EMMC module) and will show the progress. This can take a while so be patient, once it finishes you should see something like this:
+
+![dd](<images/Screenshot 2024-03-14 215026.png>)
+
