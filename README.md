@@ -38,7 +38,7 @@ Now connect both USBs and your PC into the KliPad.
 
 ![all connected](images/20240314_165251.jpg)
 
-On you computer Open up Device Manager and expand Ports (COM & LTP). You should see USB-SERIAL CH340 followed by a COM port number (take note ot if, in my case its COM3):
+On you computer Open up Device Manager and expand `Ports (COM & LTP)`. You should see `USB-SERIAL CH340` followed by a COM port number (take note ot if, in my case its COM3):
 
 ![com3](<images/Screenshot 2024-03-14 195202.png>)
 
@@ -77,11 +77,11 @@ It will now boot from the USB.
 
 ![usb boot](<images/Screenshot 2024-03-14 212446.png>)
 
-Once the boot is completed you should see on the screen a line `mkspi login: root (automatic login)`
+Once the boot is completed you should see on the screen `mkspi login: root (automatic login)`
 
 ![root auto login](<images/Screenshot 2024-03-14 212713.png>)
 
-Once it finishes booting you will be prompted to create root password, enter anything. Select your prefered shell (I use zsh), and once it asks you to create a new user, press Ctrl-C to abort and drop into the shell. You are now booted into USB.
+Once it finishes booting, you will be prompted to create root password, enter anything. Select your preferored shell (I use zsh), and once it asks you to create a new user, press Ctrl-C to abort and drop into the shell. You are now booted from USB.
 
 ## 4. Confirming USB boot
 
