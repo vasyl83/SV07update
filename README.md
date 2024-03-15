@@ -138,6 +138,26 @@ Continue by following the promts and selecting your timezone. Confirm that the i
 
 ## 8. Mounting USB stick and enabling the wifi.
 
-Running `lsblk` should now only show sda and mmcblk1 (sdb from before becomes sda).
+Running `lsblk` should now only show sda and mmcblk1 (sdb from before becomes sda). / and /boot should also be mounted on mmcblk1.
 
 ![new lsblk](<images/Screenshot 2024-03-14 220342.png>)
+
+`sudo mkdir /mnt/temp`
+
+`sudo mount /dev/sda1 /mnt/temp`
+
+`ls /mnt/temp`
+
+![ls after mount](<images/Screenshot 2024-03-14 232315.png>)
+
+The USB stick is now mounted to /mnt/temp and we can see the contents.
+
+Lets copy rk3328-roc-cc.dtb and get the wifi working.
+
+`sudo cp /mnt/temp/rk3328-roc-cc.dtb /boot/dtb/rockchip` - this will copy the dtb file into the correct location, then we need to reboot, `sudo reboot`
+
+![reboot after dtb](<images/Screenshot 2024-03-14 233024.png>)
+
+
+Wait for it to reboot, login again and run `ip a` - it will show all the ethernet and wifi adapters, we are looking for the presence of `wlan0`
+
