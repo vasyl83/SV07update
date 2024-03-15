@@ -1,18 +1,18 @@
 # How to update SV07/SV07+ to Debian Bookworm, flash latest firmware on the MCU and other mods that I use.
 
 Tools and software needed:
-1. 2 x 8 gig or more USB Stick (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
-2. Latest release of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge)
+1. 2 x 8 gig or more USB Sticks (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
+2. Latest release of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge, I will be referencing Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17)
 3. Sovol's recompiled rk3328-roc-cc.dtb that I uploaded to [this repository](https://github.com/vasyl83/sv7update/blob/main/rk3328-roc-cc.dtb). Huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it out and making this file available on his site.
 4. Computer (or laptop) with a free USB slot
-5. Cable to connect you computer (or laptop) to USB-C port on the klipad, so USB-A to USB-C or USB-C to USB-C
+5. Cable to connect you computer (or laptop) to USB-C port on the KliPad, so USB-A to USB-C or USB-C to USB-C
 
-This guide assumes that you have the default Sovol image flashed on the klipad, it doesn't matter what firmware version nor if it boots properly or is in a boot loop.
+This guide assumes that you have the default Sovol image flashed on the KliPad, it doesn't matter what firmware version nor if it boots properly or is in a boot loop.
 
 **Also backup your printer.cfg and any other config files you may need.**
 
 ## 1. Preparing USB sticks
-Download [Balena Etcher portable and run it](https://etcher.balena.io/#download-etcher)
+Download [Balena Etcher portable](https://etcher.balena.io/#download-etcher) and run it.
 
 Click "Flash from file" and select the image you downloaded (I will be using Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz as example)
 
@@ -26,7 +26,7 @@ Click "Select target" and point it to USB stick
 
 Click Select 1. Then wait for it to finish.
 
-Afterwards extract the .xz file into .img and copy that file to the second USB stick as well as rk3328-roc-cc.dtb
+Afterwards extract the .xz file into .img and copy that file to the second USB stick as well as rk3328-roc-cc.dtb.
 
 The contents of the second USB should look like this:
 
