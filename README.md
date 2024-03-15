@@ -137,3 +137,7 @@ Continue by following the promts and selecting your timezone. Confirm that the i
 ![locale-shell](<images/Screenshot 2024-03-14 220532.png>)
 
 ## 8. Mounting USB stick and enabling the wifi.
+
+Running `lsblk` should now only show sda and mmcblk1 (sdb from before becomes sda).
+
+![new lsblk](<images/Screenshot 2024-03-14 220342.png>)
