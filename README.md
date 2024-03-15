@@ -9,7 +9,7 @@ Tools and software needed:
 
 This guide assumes that you have the default Sovol image flashed on the klipad, it doesn't matter what firmware version nor if it boots properly or is in a boot loop.
 
-## Flashing the image onto USB stick and copying the files to the second USB stick
+## 1. Preparing USB sticks
 Download [Balena Etcher portable and run it](https://etcher.balena.io/#download-etcher)
 
 Click "Flash from file" and select the image you downloaded (I will be using Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17.img.xz as example)
@@ -28,3 +28,9 @@ Afterwards extract the .xz file into .img and copy that file to the second USB s
 The contents of the second USB should look like this:
 
 ![2nd usb](<images/Screenshot 2024-03-14 203954.png>)
+
+## 2. Plugging everyhting into the printer.
+
+Now connect both USBs and your PC into the KliPad.
+
+![all connected](images/20240314_165251.jpg)
