@@ -47,3 +47,14 @@ Input the following settings:
 3. Speed: 1500000
 
 ![putty](<images/Screenshot 2024-03-14 195248.png>)
+
+Click Open, you should now see a blank black window, press Enter a few times untill you see a login prompt:
+
+![putty login](<images/Screenshot 2024-03-14 195332.png>)
+
+Enter the username and password you use (defaults are user:mks password:makerbase)
+
+halt the system:
+`sudo halt`
+
+<video controls src="images/halt.mp4" title="sudo halt"></video>
