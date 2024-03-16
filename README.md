@@ -379,3 +379,11 @@ If you had any custom includes in your priner.cfg make sure to copy everything o
 
 If you are like me and used klipper-backup you can simply `git clone` your backup repository and everything will be restored.
 
+Finally, either reboot the host via Mainsail or by:
+```
+sudo reboot
+```
+
+Once the host is booted, log into Mainsail, click on Machine and now you should see that the version on mcu, mcu rpi and host are all the same (0.12.0-124 as the time of writing), that the OS is `Armbian-unofficial 24.2.0-trunk bookworm` and not buster like on the Sovol image. Finally, everything (including system packages) is up to date.
+
+![final machine](<images/Screenshot 2024-03-16 012621.png>)
