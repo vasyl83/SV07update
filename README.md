@@ -426,6 +426,8 @@ sudo apt-get update
 sudo apt-get install python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev
 ~/klippy-env/bin/pip install -v numpy
 ```
+The last command will take a loooooooooong time, be patient.
+
 Now using Input Shaper on KilpperScreen will not give out any errors.
 
 ## 16. Additionnal addons
