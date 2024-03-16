@@ -2,10 +2,11 @@
 
 Tools and software needed:
 1. 2 x 8 gig or more USB Sticks (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
-2. Latest release of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge, I will be referencing Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17)
-3. Sovol's recompiled rk3328-roc-cc.dtb that I uploaded to [this repository](https://github.com/vasyl83/sv7update/blob/main/rk3328-roc-cc.dtb). Huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it out and making this file available on his site.
-4. Computer (or laptop) with a free USB slot
-5. Cable to connect you computer (or laptop) to USB-C port on the KliPad, so USB-A to USB-C or USB-C to USB-C
+2. SD card or microSD card with SD adapter, any size. It must have MBR partition table and formatted in FAT32.
+3. Latest release of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge, I will be referencing Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17)
+4. Sovol's recompiled rk3328-roc-cc.dtb that I uploaded to [this repository](https://github.com/vasyl83/sv7update/blob/main/rk3328-roc-cc.dtb). Huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it out and making this file available on his site.
+5. Computer (or laptop) with a free USB slot
+6. Cable to connect you computer (or laptop) to USB-C port on the KliPad, so USB-A to USB-C or USB-C to USB-C
 
 This guide assumes that you have the default Sovol image flashed on the KliPad, it doesn't matter what firmware version nor if it boots properly or is in a boot loop.
 
@@ -292,8 +293,29 @@ This time we will select `STMicroelectronics STM32` as `Micro-controller Archite
 
 ![mcu setup](<images/Screenshot 2024-03-15 235401.png>)
 
-Again, `Q` to save and exit. 
+Again, `Q` to save and exit. Then,
 
 ```
 make
 ```
+
+![klipper.bin](<images/Screenshot 2024-03-15 235920.png>)
+
+Now let's copy klipper.bin that we just compiled to /home/mks so it would be easy to get it from the printer and onto SD card.
+
+```
+cp out/klipper.bin ~
+```
+
+![alt text](<images/Screenshot 2024-03-16 000423.png>)
+
+Now start WinSCP or any other SFTP program, connect to the printer (by default it will connect to /home of the user, so in our case /home/mks where we copied firmware.bin)
+
+![winscp](<images/Screenshot 2024-03-16 000901.png>)
+
+![copy interface](<images/Screenshot 2024-03-16 000957.png>)
+
+Now rename the file to anything, I named mine klipper-16-03-2024.bin, you will need to change the file name everytime you attempt a flash, once a name is used it won't work if you use it again.
+
+And copy it to the SD card. **Make sure the SD card is MBR and the partition is FAT32** you can get that information from Disk Managment tool (right-click start button and select Disk Managment), here what is should look like:
+![mbr](<images/Screenshot 2024-03-16 001728.png>)
