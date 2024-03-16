@@ -265,3 +265,11 @@ This will open a window with options for klipper.
 In the menu, set `Microcontroller Architecture` to `Linux process`, then save and exit by pressing `Q`.
 
 ![menuconfig linux process](<images/Screenshot 2024-03-15 233556.png>)
+
+Next, we stop klipper install firmware and start klipper again.
+
+```
+sudo service klipper stop
+make flash
+sudo service klipper start
+```
