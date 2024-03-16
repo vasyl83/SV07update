@@ -275,3 +275,14 @@ sudo systemctl start klipper.service
 ```
 
 ![klipper restarted](<images/Screenshot 2024-03-15 234156.png>)
+
+Now MKS PI MCU is up to date, next lets prepare the firmware update the MCU inside the printer.
+
+```
+cd ~/klipper/
+make menuconfig
+```
+
+This time we will select `STMicroelectronics STM32` as `Micro-controller Architecture`, next `Processor model (STM32F103)` should be selected by default. Then set `Bootloader offset` to `28KiB bootloader`. Finally ` Communication interface` to `Serial (on USART1 PA10/PA9)`.
+
+![mcu setup](<images/Screenshot 2024-03-15 235401.png>)
