@@ -387,3 +387,33 @@ sudo reboot
 Once the host is booted, log into Mainsail, click on Machine and now you should see that the version on mcu, mcu rpi and host are all the same (0.12.0-124 as the time of writing), that the OS is `Armbian-unofficial 24.2.0-trunk bookworm` and not buster like on the Sovol image. Finally, everything (including system packages) is up to date.
 
 ![final machine](<images/Screenshot 2024-03-16 012621.png>)
+
+## 14. Enabling boot splash screen
+
+```
+sudo nano /boot/armbianEnv.txt
+```
+
+Change `bootlogo=false` to `bootlogo=true`
+
+![bootlogo](<images/Screenshot 2024-03-16 184455.png>)
+
+List all installed themes:
+```
+sudo plymouth-set-default-theme -l
+```
+
+Select one like `solar` and then
+
+```
+sudo plymouth-set-default-theme solar
+sudo update-initramfs -u
+```
+
+Now reboot and you will see a cute animation instead of lines of text.
+
+```
+sudo reboot
+```
+
+![initramfs](<images/Screenshot 2024-03-16 184938.png>)
