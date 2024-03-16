@@ -214,7 +214,19 @@ As you can see there were no updates and a few packages were held back, wich is 
 
 ![kiauh](<images/Screenshot 2024-03-15 000058.png>)
 
-Install Klipper, Moonraker, Mainsail (or Fluidd or both), KlipperScreen and Crowsnest (if you will use a webcam) plus anything else you use, then reboot.
+Install Klipper, Moonraker, Mainsail (or Fluidd or both), KlipperScreen and Crowsnest (if you will use a webcam) plus anything else you use.
+
+Now we need to install klipper_mcu process to use MKSPI as MCU.
+
+```
+cd ~/klipper/
+sudo cp ./scripts/klipper-mcu.service /etc/systemd/system/
+sudo systemctl enable klipper-mcu.service
+```
+Reboot:
+```
+sudo reboot
+```
 
 ## 11. KlipperScreen orientation
 
@@ -331,8 +343,6 @@ Put your SD card into the slot. Power on the printer **(with KliPad disconnected
 
 Now simply copy back your backed up printer.cfg to /home/mks/printer_data/config or copy/paste its contents into printer.cfg using Mainsail or Fluidd (even if you have an error saying can't connect to the mcu, which is normal because the default printer.cfg lack info about SV07, you should still be able to access the configs).
 
-If you are like me and used klipper-backup you can simply `git clone` your backup repository and everything will be restored.
-
 Restart klipper.
 
 ```
@@ -366,4 +376,6 @@ gcode:
 Again, huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it all out.
 
 If you had any custom includes in your priner.cfg make sure to copy everything over or comment out any includes, if not you may get errors from klipper for not finding the files.
+
+If you are like me and used klipper-backup you can simply `git clone` your backup repository and everything will be restored.
 
