@@ -409,6 +409,7 @@ Select one like `solar` and then
 sudo plymouth-set-default-theme solar
 sudo update-initramfs -u
 ```
+![initramfs](<images/Screenshot 2024-03-16 184938.png>)
 
 Now reboot and you will see a cute animation instead of lines of text.
 
@@ -416,7 +417,7 @@ Now reboot and you will see a cute animation instead of lines of text.
 sudo reboot
 ```
 
-![initramfs](<images/Screenshot 2024-03-16 184938.png>)
+
 
 ## 15. Additionnal addons
 
