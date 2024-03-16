@@ -269,7 +269,9 @@ In the menu, set `Microcontroller Architecture` to `Linux process`, then save an
 Next, we stop klipper install firmware and start klipper again.
 
 ```
-sudo service klipper stop
+sudo systemctl stop klipper.service
 make flash
-sudo service klipper start
+sudo systemctl start klipper.service
 ```
+
+![klipper restarted](<images/Screenshot 2024-03-15 234156.png>)
