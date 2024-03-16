@@ -259,3 +259,9 @@ cd ~/klipper/
 make menuconfig
 ```
 This will open a window with options for klipper.
+
+![menuconfig default](<images/Screenshot 2024-03-15 233117.png>)
+
+In the menu, set `Microcontroller Architecture` to `Linux process`, then save and exit by pressing `Q`.
+
+![menuconfig linux process](<images/Screenshot 2024-03-15 233556.png>)
