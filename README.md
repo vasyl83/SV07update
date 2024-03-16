@@ -420,7 +420,8 @@ sudo reboot
 
 ## 15. Additionnal addons
 
-[Klipper-backup](https://staubgeborener.github.io/klipper-backup/) - backup your configs to GitHub.
-[Klipper-Adaptive-Meshing-Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) - eventhough Klipper 12 has adaptive meshing backed in, I still use KAMP for the purging.
-[Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - Best add on I found for timelapses.
+| Addon Name | Usecase |
+| [Klipper-backup](https://staubgeborener.github.io/klipper-backup/) | backup your configs to GitHub |
+| [Klipper-Adaptive-Meshing-Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) | eventhough Klipper 12 has adaptive meshing backed in, I still use KAMP for the purging |
+| [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) | Best add on I found for timelapses |
 
