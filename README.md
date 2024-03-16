@@ -318,4 +318,13 @@ Now start WinSCP or any other SFTP program, connect to the printer (by default i
 Now rename the file to anything, I named mine klipper-16-03-2024.bin, you will need to change the file name everytime you attempt a flash, once a name is used it won't work if you use it again.
 
 And copy it to the SD card. **Make sure the SD card is MBR and the partition is FAT32** you can get that information from Disk Managment tool (right-click start button and select Disk Managment), here what is should look like:
+
 ![mbr](<images/Screenshot 2024-03-16 001728.png>)
+
+Power down the printer, fully disconnect the KliPad and remove printer's front panel. You should see the MCU with a prominent SD card slot. 
+
+![no front panel](images/20240316_003404.jpg)
+
+Put your SD card into the slot. Power on the printer **(with KliPad disconnected, this is important!)**, wait for 30 seconds and then power off the printer. Nothing will happen visually. Reconnect everything, power on the printer again and lets see if everything worked and finally set up printer.cfg
+
+
