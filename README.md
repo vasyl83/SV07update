@@ -434,7 +434,7 @@ Now using Input Shaper on KilpperScreen will not give out any errors.
 In order to get some free space back on the emmc, it is wise to delete cached packages. Simply run
 
 ```
-sudo apt aclean
+sudo apt clean
 ```
 
 I was able to get 400 megs back.
