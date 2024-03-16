@@ -309,7 +309,7 @@ cp out/klipper.bin ~
 
 ![alt text](<images/Screenshot 2024-03-16 000423.png>)
 
-Now start WinSCP or any other SFTP program, connect to the printer (by default it will connect to /home of the user, so in our case /home/mks where we copied firmware.bin)
+Now start [WinSCP](https://winscp.net/eng/index.php) or any other SFTP program, connect to the printer (by default it will connect to /home of the user, so in our case /home/mks where we copied firmware.bin)
 
 ![winscp](<images/Screenshot 2024-03-16 000901.png>)
 
@@ -327,4 +327,43 @@ Power down the printer, fully disconnect the KliPad and remove printer's front p
 
 Put your SD card into the slot. Power on the printer **(with KliPad disconnected, this is important!)**, wait for 30 seconds and then power off the printer. Nothing will happen visually. Reconnect everything, power on the printer again and lets see if everything worked and finally set up printer.cfg
 
+## 13. printer.cfg
+
+Now simply copy back your backed up printer.cfg to /home/mks/printer_data/config or copy/paste its contents into printer.cfg using Mainsail or Fluidd (even if you have an error saying can't connect to the mcu, which is normal because the default printer.cfg lack info about SV07, you should still be able to access the configs).
+
+If you are like me and used klipper-backup you can simply `git clone` your backup repository and everything will be restored.
+
+Restart klipper.
+
+```
+sudo systemctl restart klipper.service
+```
+Or use Mainsail or Fluidd.
+
+Now we need to comment out or remove all the references to plr (power loss recovery). It should be possible to reenable it at the end, but for now, since we are not using Sovol's image we need to remove references to it.
+
+Find the following lines and comment them out or delete them:
+
+```
+[include plr.cfg]
+```
+```
+SAVE_VARIABLE VARIABLE=was_interrupted VALUE=False
+RUN_SHELL_COMMAND CMD=clear_plr
+clear_last_file
+G31
+```
+```
+[gcode_macro PRINT_START]
+gcode:
+    SAVE_VARIABLE VARIABLE=was_interrupted VALUE=True
+[gcode_macro PRINT_END]
+gcode:
+    SAVE_VARIABLE VARIABLE=was_interrupted VALUE=False
+    RUN_SHELL_COMMAND CMD=clear_plr
+    clear_last_file
+```
+Again, huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it all out.
+
+If you had any custom includes in your priner.cfg make sure to copy everything over or comment out any includes, if not you may get errors from klipper for not finding the files.
 
