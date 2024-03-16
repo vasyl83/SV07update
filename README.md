@@ -424,5 +424,6 @@ sudo reboot
 | :----------- | :----------- |
 | [Klipper-backup](https://staubgeborener.github.io/klipper-backup/) | backup your configs to GitHub |
 | [Klipper-Adaptive-Meshing-Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) | eventhough Klipper 12 has adaptive meshing backed in, I still use KAMP for the purging |
-| [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) | Best add on I found for timelapses |
+| [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) | best add on I found for timelapses |
+| [Shell-command](https://github.com/dw-0/kiauh/blob/master/docs/gcode_shell_command.md) | Installed via KIAUH, option 4 advanced. Required for Klipper-backup and plr |
 
