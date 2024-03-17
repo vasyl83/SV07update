@@ -1,4 +1,4 @@
-# How to update SV07/SV07+ as well as SV06/SV06+ with KliPad to Debian Bookworm, flash latest firmware on the MCU and QOL stuff for the printer.
+# How to update SV07/SV07+ as well as SV06/SV06+ with KliPad to Debian Bookworm, flash latest firmware on the MCU (for SV07?SV07+ only) and QOL stuff for the printer.
 
 Tools and software needed:
 1. 2 x 8 gig or more USB Sticks (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
