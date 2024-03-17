@@ -449,3 +449,6 @@ I was able to get 400 megs back.
 | [Shell-command](https://github.com/dw-0/kiauh/blob/master/docs/gcode_shell_command.md) | Installed via KIAUH, option 4. Advanced. Required for Klipper-backup and plr |
 | [Moonraker-telegram-bot](https://github.com/nlef/moonraker-telegram-bot) | Get printer updates sent to your telegram channel |
 
+## 18. My printer.cfg and other config files.
+
+If anyone wants to see [them for reference](https://github.com/vasyl83/sv07/tree/main/printer_data/config). I changed some macros a little and I use BTT filament sensor.
