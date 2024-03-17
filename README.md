@@ -329,7 +329,7 @@ Now start [WinSCP](https://winscp.net/eng/index.php) or any other SFTP program, 
 
 Now rename the file to anything, I named mine klipper-16-03-2024.bin, you will need to change the file name everytime you attempt a flash, once a name is used it won't work if you use it again.
 
-And copy it to the SD card. **Make sure the SD card is MBR and the partition is FAT32** you can get that information from Disk Managment tool (right-click start button and select Disk Managment). Is your SD card is bigger than 32 Gigs it will not let you format a partition with FAT32, if that is the case, simply create a partition smaller than 32 Gig. Here what is should look like, as you can see I have a partition smaller than 32 Gigs in order to format it FAT32:
+And copy it to the SD card. **Make sure the SD card is MBR and the partition is FAT32** you can get that information from Disk Managment tool (right-click start button and select Disk Managment). If your SD card is bigger than 32 Gigs it will not let you format a partition with FAT32, if that is the case, simply create a partition smaller than 32 Gigs. Here what is should look like, as you can see I have a partition smaller than 32 Gigs in order to format it FAT32:
 
 ![mbr](<images/Screenshot 2024-03-16 001728.png>)
 
