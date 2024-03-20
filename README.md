@@ -433,6 +433,8 @@ Now using Input Shaper on KilpperScreen will not give out any errors.
 
 ## 17. Beeper
 
+First, we need to add new rules to udev,
+
 ## 18. Cleanup
 
 In order to get some free space back on the emmc, it is wise to delete cached packages. Simply run
