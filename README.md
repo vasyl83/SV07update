@@ -433,7 +433,82 @@ Now using Input Shaper on KilpperScreen will not give out any errors.
 
 ## 17. Beeper
 
-First, we need to add new rules to udev,
+First, make sure that you have G-Code Shell Command installed (run KIAUH, option 4, the 8), then we need to add new rules to udev:
+
+```
+sudo nano /etc/udev/rules.d/90-gpio.rules
+```
+
+Add 2 following lines to the file:
+
+```
+SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:dialout /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
+SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:dialout /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
+```
+
+Next, we need to add 2 macros to printer.cfg:
+
+```
+[gcode_macro BEEP]
+gcode:
+  {% set beep_count = params.BC|default("3") %}
+  {% set beep_duration = params.BD|default("0.2") %}
+  {% set pause_duration = params.PD|default("1") %}
+  RUN_SHELL_COMMAND CMD=beep PARAMS='{beep_count} {beep_duration} {pause_duration}'
+
+[gcode_shell_command beep]
+command: bash /home/mks/printer_data/config/macro/macro-beep.sh
+timeout: 10
+verbose: False
+```
+
+Finally let's create the shell script the macro is referencing:
+
+```
+nano /home/mks/printer_data/config/macros/macro_beep.sh
+```
+
+Paste the followting into that shell script:
+
+```
+#!/bin/bash
+# usage: beep.sh [BEEPCOUNT] [BEEPDURATION] [PAUSEDURATION]
+
+# Output raw passed parameters
+echo "Raw parameters: $@"
+
+# Default values
+BEEPCOUNT=${1:-3}
+BEEPDURATION=${2:-0.1}
+PAUSEDURATION=${3:-0.5}
+
+# Output all passed parameters
+echo "Beep count: $BEEPCOUNT, beep duration: $BEEPDURATION, pause duration: $PAUSEDURATION"
+
+
+# Function to play a beep
+play_beep() {
+    echo 1 > /sys/class/gpio/gpio82/value
+    sleep $BEEPDURATION
+    echo 0 > /sys/class/gpio/gpio82/value
+}
+
+# Play the beep for the specified count
+for (( i=0; i<BEEPCOUNT; i++ )); do
+    play_beep
+    sleep $PAUSEDURATION
+done
+```
+
+I don't know if the next command is strictly necessary, but shell scripts usually should be executable, so let's make it executable:
+
+```
+sudo chmod +x /home/mks/printer_data/config/macros/macro_beep.sh
+```
+Now you have a macro that you can reference in other macros that can beep.
+
+If you want to have the screen beep when you touch it .........
+
 
 ## 18. Cleanup
 
