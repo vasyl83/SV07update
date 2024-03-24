@@ -4,7 +4,7 @@ Tools and software needed:
 1. 2 x 8 gig or more USB Sticks (can be done with one USB stick, but this guide assumes 2, as I did it with 2 before I figured I could only use one)
 2. SD card or microSD card with SD adapter, any size. It must have MBR partition table and formatted in FAT32.
 3. Latest release of [unofficial Armbian for MKSPI](https://github.com/redrathnure/armbian-mkspi/releases) (bookworm current or edge, I will be referencing Armbian-unofficial_24.2.0-trunk_Mkspi_bookworm_current_6.6.17)
-4. Sovol's recompiled rk3328-roc-cc.dtb that I uploaded to [this repository](https://github.com/vasyl83/sv7update/blob/main/rk3328-roc-cc.dtb). Huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it out and making this file available on his site.
+4. Sovol's recompiled rk3328-roc-cc.dtb that I uploaded to [this repository](https://github.com/vasyl83/sv07update/blob/main/rk3328-roc-cc.dtb). Huge thanks to [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start) for figuring it out and making this file available on his site.
 5. Computer (or laptop) with a free USB slot
 6. Cable to connect you computer (or laptop) to USB-C port on the KliPad, so USB-A to USB-C or USB-C to USB-C
 
