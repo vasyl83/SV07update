@@ -491,7 +491,6 @@ PAUSEDURATION=${3:-0.5}
 # Output all passed parameters
 echo "Beep count: $BEEPCOUNT, beep duration: $BEEPDURATION, pause duration: $PAUSEDURATION"
 
-
 # Function to play a beep
 play_beep() {
     echo 1 > /sys/class/gpio/gpio82/value
