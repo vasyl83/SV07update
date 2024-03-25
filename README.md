@@ -63,7 +63,7 @@ halt the system:
 
 ## 3. Booting from USB
 
-Make sure that the KliPad screen in blank, PuTTY window should remain like this (what you see shouldn't be exactly the same, only the result of the command should be the same):
+Make sure that the KliPad screen is blank, PuTTY window should remain like this (what you see shouldn't be exactly the same, only the result of the command should be the same):
 
 ![putty halted](<images/Screenshot 2024-03-14 210833.png>)
 
