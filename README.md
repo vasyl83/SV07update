@@ -431,6 +431,12 @@ Now using Input Shaper on KilpperScreen will not give out any errors.
 
 ## 16. Automount USB
 
+Use [makerbase-beep-service.deb](makerbase-beep-service.deb) made by [Thorsten Maerz](https://netztorte.de/3d/doku.php?id=start).
+
+```
+sudo dpkg -i makerbase-beep-service.deb
+```
+
 ## 17. Beeper
 
 First, make sure that you have G-Code Shell Command installed (run KIAUH, option 4, the 8), then we need to add new rules to udev:
