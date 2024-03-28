@@ -512,9 +512,6 @@ sudo chmod +x /home/mks/printer_data/config/macros/macro_beep.sh
 ```
 Now you have a macro that you can reference in other macros that can beep.
 
-If you want to have the screen beep when you touch it .........
-
-
 ## 18. Cleanup
 
 In order to get some free space back on the emmc, it is wise to delete cached packages. Simply run
@@ -525,7 +522,7 @@ sudo apt clean
 
 I was able to get 400 megs back.
 
-## 19. Additionnal addons
+## 19. Additionnal tools
 
 | Addon Name | Usecase |
 | :----------- | :----------- |
@@ -535,6 +532,8 @@ I was able to get 400 megs back.
 | [Shell-command](https://github.com/dw-0/kiauh/blob/master/docs/gcode_shell_command.md) | Installed via KIAUH, option 4. Advanced. Required for Klipper-backup and plr |
 | [Moonraker-telegram-bot](https://github.com/nlef/moonraker-telegram-bot) | Get printer updates sent to your telegram channel |
 
-## 20. My printer.cfg and other config files.
+## 20. Restoring plr
+
+## 21. My printer.cfg and other config files.
 
 If anyone wants to see [them for reference](https://github.com/vasyl83/sv07/tree/main/printer_data/config). I changed some macros a little and I use BTT filament sensor.
